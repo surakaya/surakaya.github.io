@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Şura Kaya | Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="#home" class="logo">Şura Kaya</a>
+            <ul class="nav-links">
+                <li><a href="#about" data-i18n="nav.about">About</a></li>
+                <li><a href="#experience" data-i18n="nav.experience">Experience</a></li>
+                <li><a href="#projects" data-i18n="nav.projects">Projects</a></li>
+                <li><a href="#skills" data-i18n="nav.skills">Skills</a></li>
+                <li><a href="#contact" data-i18n="nav.contact">Contact</a></li>
+            </ul>
+            <button class="lang-toggle" id="langToggle">TR</button>
+        </div>
+    </nav>
+
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <h1>Şura Kaya</h1>
+            <p class="subtitle" data-i18n="hero.subtitle">Computer Engineering Student</p>
+            <div class="social-links">
+                <a href="https://github.com/surakaya" target="_blank">GitHub</a>
+                <a href="https://www.linkedin.com/in/şura-kaya-37402a254" target="_blank">LinkedIn</a>
+            </div>
+        </div>
+    </section>
+
+    <section id="about" class="section">
+        <div class="container">
+            <h2 class="section-title" data-i18n="about.title">About Me</h2>
+            <div class="about-content">
+                <p data-i18n="about.description">Computer Engineering student based. Passionate about in Ankara, Turkey software development, machine learning, and building innovative solutions.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="experience" class="section">
+        <div class="container">
+            <h2 class="section-title" data-i18n="experience.title">Experience</h2>
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-date">2024 - Present</div>
+                    <div class="timeline-content">
+                        <h3 data-i18n="experience.1.title">Software Developer</h3>
+                        <p class="company">Freelance</p>
+                        <p data-i18n="experience.1.description">Building web and mobile applications, working with various clients on custom software solutions.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="projects" class="section">
+        <div class="container">
+            <h2 class="section-title" data-i18n="projects.title">Projects</h2>
+            <div class="projects-grid" id="projects-grid">
+                <!-- Projects will be loaded from GitHub API -->
+            </div>
+        </div>
+    </section>
+
+    <section id="skills" class="section">
+        <div class="container">
+            <h2 class="section-title" data-i18n="skills.title">Skills</h2>
+            <div class="skills-grid">
+                <div class="skill-category">
+                    <h3 data-i18n="skills.languages">Languages</h3>
+                    <div class="skill-tags">
+                        <span>Python</span>
+                        <span>Java</span>
+                        <span>JavaScript</span>
+                        <span>TypeScript</span>
+                    </div>
+                </div>
+                <div class="skill-category">
+                    <h3 data-i18n="skills.frontend">Frontend</h3>
+                    <div class="skill-tags">
+                        <span>React</span>
+                        <span>HTML</span>
+                        <span>CSS</span>
+                    </div>
+                </div>
+                <div class="skill-category">
+                    <h3 data-i18n="skills.backend">Backend</h3>
+                    <div class="skill-tags">
+                        <span>FastAPI</span>
+                        <span>Node.js</span>
+                        <span>Redis</span>
+                    </div>
+                </div>
+                <div class="skill-category">
+                    <h3 data-i18n="skills.ml">Machine Learning</h3>
+                    <div class="skill-tags">
+                        <span>TensorFlow</span>
+                        <span>Scikit-learn</span>
+                        <span>Pandas</span>
+                    </div>
+                </div>
+                <div class="skill-category">
+                    <h3 data-i18n="skills.tools">Tools</h3>
+                    <div class="skill-tags">
+                        <span>Git</span>
+                        <span>Docker</span>
+                        <span>GitHub</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="section">
+        <div class="container">
+            <h2 class="section-title" data-i18n="contact.title">Contact</h2>
+            <div class="contact-content">
+                <p data-i18n="contact.description">Feel free to reach out to me for collaborations or questions!</p>
+                <div class="contact-links">
+                    <a href="mailto:sura@kaya.com">sura@kaya.com</a>
+                    <a href="https://www.linkedin.com/in/şura-kaya-37402a254" target="_blank">LinkedIn</a>
+                    <a href="https://github.com/surakaya" target="_blank">GitHub</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Şura Kaya. All rights reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
