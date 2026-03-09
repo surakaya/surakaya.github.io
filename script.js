@@ -1,21 +1,21 @@
 const staticProjects = [
     {
-        name: "churnguard-api",
-        description: "Uctan uca musteri kayip (churn) tahmin sistemi. FastAPI uzerinde model inference servisi ve Docker tabanli calisma.",
-        topics: ["FastAPI", "ML", "Docker"],
-        url: "https://github.com/surakaya/churnguard-api"
+        name: "car-price-prediction-knn",
+        description: "A car price prediction project using Python and K-NN.",
+        topics: ["Python", "KNN", "Jupyter Notebook"],
+        url: "https://github.com/surakaya/car-price-prediction-knn"
     },
     {
-        name: "AI Destekli Multi-Tenant Support Platformu",
-        description: "Destek taleplerini kategori ve aciliyet acisindan siniflandiran, multi-tenant backend mimarisi ile gelistirilmis proje.",
-        topics: ["FastAPI", "MySQL", "TF-IDF"],
-        url: "https://github.com/surakaya"
+        name: "e-commerceAnalysis",
+        description: "A machine learning project for analyzing e-commerce customer behavior.",
+        topics: ["Machine Learning", "Random Forest", "Decision Tree"],
+        url: "https://github.com/surakaya/e-commerceAnalysis"
     },
     {
-        name: "GitHub Repositories",
-        description: "Diger tum projelerimi ve guncel repo listemi GitHub profilimde bulabilirsin.",
-        topics: ["GitHub", "Portfolio"],
-        url: "https://github.com/surakaya?tab=repositories"
+        name: "cinevia-movie-app",
+        description: "A movie discovery mobile app developed with Java for Android.",
+        topics: ["Java", "Android", "Mobile"],
+        url: "https://github.com/surakaya/cinevia-movie-app"
     }
 ];
 
@@ -38,7 +38,7 @@ function renderProjects() {
             <p>${project.description}</p>
             <div class="project-topics">${topicsHtml}</div>
             <div class="project-links">
-                <a href="${project.url}" target="_blank" rel="noreferrer">GitHub'da Ac</a>
+                <a href="${project.url}" target="_blank" rel="noreferrer">GitHub'da Aç</a>
             </div>
         `;
 
