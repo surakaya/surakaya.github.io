@@ -1,48 +1,49 @@
-async function fetchProjects() {
-    const projectsGrid = document.getElementById('projects-grid');
+const staticProjects = [
+    {
+        name: "churnguard-api",
+        description: "Uctan uca musteri kayip (churn) tahmin sistemi. FastAPI uzerinde model inference servisi ve Docker tabanli calisma.",
+        topics: ["FastAPI", "ML", "Docker"],
+        url: "https://github.com/surakaya/churnguard-api"
+    },
+    {
+        name: "AI Destekli Multi-Tenant Support Platformu",
+        description: "Destek taleplerini kategori ve aciliyet acisindan siniflandiran, multi-tenant backend mimarisi ile gelistirilmis proje.",
+        topics: ["FastAPI", "MySQL", "TF-IDF"],
+        url: "https://github.com/surakaya"
+    },
+    {
+        name: "GitHub Repositories",
+        description: "Diger tum projelerimi ve guncel repo listemi GitHub profilimde bulabilirsin.",
+        topics: ["GitHub", "Portfolio"],
+        url: "https://github.com/surakaya?tab=repositories"
+    }
+];
+
+function renderProjects() {
+    const projectsGrid = document.getElementById("projects-grid");
     if (!projectsGrid) return;
 
-    try {
-        const response = await fetch('https://api.github.com/users/surakaya/repos?sort=updated&per_page=8');
-        if (!response.ok) {
-            throw new Error(`GitHub API error: ${response.status}`);
-        }
+    projectsGrid.innerHTML = "";
 
-        const repos = await response.json();
-        const filteredRepos = repos
-            .filter((repo) => !repo.fork)
-            .slice(0, 6);
+    staticProjects.forEach((project) => {
+        const card = document.createElement("article");
+        card.className = "project-card";
 
-        projectsGrid.innerHTML = '';
+        const topicsHtml = project.topics
+            .map((topic) => `<span class="project-topic">${topic}</span>`)
+            .join("");
 
-        filteredRepos.forEach((repo) => {
-            const card = document.createElement('article');
-            card.className = 'project-card';
+        card.innerHTML = `
+            <h3><a href="${project.url}" target="_blank" rel="noreferrer">${project.name}</a></h3>
+            <p>${project.description}</p>
+            <div class="project-topics">${topicsHtml}</div>
+            <div class="project-links">
+                <a href="${project.url}" target="_blank" rel="noreferrer">GitHub'da Ac</a>
+            </div>
+        `;
 
-            const topics = (repo.topics || []).slice(0, 3);
-            const topicsHtml = topics
-                .map((topic) => `<span class="project-topic">${topic}</span>`)
-                .join('');
-
-            card.innerHTML = `
-                <h3><a href="${repo.html_url}" target="_blank" rel="noreferrer">${repo.name}</a></h3>
-                <p>${repo.description || 'Açıklama bulunmuyor.'}</p>
-                <div class="project-topics">${topicsHtml}</div>
-                <div class="project-links">
-                    <a href="${repo.html_url}" target="_blank" rel="noreferrer">Kodu Gör</a>
-                </div>
-            `;
-
-            projectsGrid.appendChild(card);
-        });
-
-        if (!filteredRepos.length) {
-            projectsGrid.innerHTML = '<p class="loading-text">Henüz listelenecek proje bulunamadı.</p>';
-        }
-    } catch (error) {
-        console.error(error);
-        projectsGrid.innerHTML = '<p class="loading-text">Projeler şu anda yüklenemiyor.</p>';
-    }
+        projectsGrid.appendChild(card);
+    });
 }
 
-document.addEventListener('DOMContentLoaded', fetchProjects);
+document.addEventListener("DOMContentLoaded", renderProjects);
