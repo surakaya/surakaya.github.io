@@ -84,6 +84,21 @@ body {
     color: var(--text);
 }
 
+.lang-toggle {
+    border: 1px solid var(--line-strong);
+    background: #fff;
+    color: var(--text);
+    border-radius: 8px;
+    padding: 0.34rem 0.64rem;
+    font-size: 0.8rem;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+.lang-toggle:hover {
+    background: #f5f7fa;
+}
+
 main {
     max-width: 1120px;
     margin: 0 auto;

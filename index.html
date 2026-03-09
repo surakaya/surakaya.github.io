@@ -16,22 +16,23 @@
         <div class="nav-container">
             <a href="#home" class="logo">Zeynep Şura Kaya</a>
             <ul class="nav-links">
-                <li><a href="#about">Hakkımda</a></li>
-                <li><a href="#education">Eğitim</a></li>
-                <li><a href="#featured-work">Çalışmalar</a></li>
-                <li><a href="#projects">Projeler</a></li>
-                <li><a href="#skills">Yetenekler</a></li>
-                <li><a href="#experience">Deneyim</a></li>
+                <li><a href="#home" id="navAbout">Hakkımda</a></li>
+                <li><a href="#education" id="navEducation">Eğitim</a></li>
+                <li><a href="#featured-work" id="navFeatured">Çalışmalar</a></li>
+                <li><a href="#projects" id="navProjects">Projeler</a></li>
+                <li><a href="#skills" id="navSkills">Yetenekler</a></li>
+                <li><a href="#experience" id="navExperience">Deneyim</a></li>
             </ul>
+            <button class="lang-toggle" id="langToggle" type="button">EN</button>
         </div>
     </nav>
 
     <main>
         <section id="home" class="hero">
             <div class="hero-content">
-                <p class="hero-tag">BİLGİSAYAR MÜHENDİSLİĞİ ÖĞRENCİSİ | AI & BACKEND GELİŞTİRİCİ</p>
+                <p class="hero-tag" id="heroTag">BİLGİSAYAR MÜHENDİSLİĞİ ÖĞRENCİSİ | AI & BACKEND GELİŞTİRİCİ</p>
                 <h1>Zeynep Şura Kaya</h1>
-                <p class="hero-description" id="about">
+                <p class="hero-description" id="heroDescription">
                     Yapay zeka ve veri odaklı çözümleri üretime uygun backend sistemlerine dönüştürmeye odaklanan bilgisayar mühendisliği son sınıf öğrencisiyim. Ölçeklenebilir API'ler ve veri işleme sistemleri geliştirerek gerçek dünya problemlerine çözüm üretmeyi hedefliyorum.
                 </p>
                 <div class="cta-buttons">
@@ -59,37 +60,37 @@
 
         <section id="education" class="section">
             <div class="container">
-                <h2 class="section-title">Eğitim</h2>
+                <h2 class="section-title" id="educationTitle">Eğitim</h2>
                 <div class="education-card">
-                    <h3>Kastamonu Üniversitesi <span>| 2022-2026</span></h3>
-                    <p>Bilgisayar Mühendisliği Lisans</p>
+                    <h3><span id="educationSchool">Kastamonu Üniversitesi</span> <span>| 2022-2026</span></h3>
+                    <p id="educationDegree">Bilgisayar Mühendisliği Lisans</p>
                 </div>
             </div>
         </section>
 
         <section id="featured-work" class="section">
             <div class="container">
-                <h2 class="section-title">Öne Çıkan Çalışmalar</h2>
+                <h2 class="section-title" id="featuredTitle">Öne Çıkan Çalışmalar</h2>
                 <div class="timeline">
                     <article class="timeline-item">
                         <div class="timeline-date">Churnguard-api</div>
                         <div class="timeline-content">
-                            <h3>Uçtan Uca Müşteri Kayıp (Churn) Tahmin Sistemi</h3>
+                            <h3 id="fw1Title">Uçtan Uca Müşteri Kayıp (Churn) Tahmin Sistemi</h3>
                             <ul>
-                                <li>Logistic Regression modeli geliştirildi (ROC-AUC yaklaşık 0.85); eğitim pipeline'ı notebook'tan ayrıştırılarak üretim koduna taşındı ve model sürümleme/metadata yapısı kuruldu.</li>
-                                <li>FastAPI üzerinde çalışan inference servisi geliştirildi; strict input validation, şema kontratı, hata senaryoları ve logging (latency + model version) eklendi.</li>
-                                <li>Docker ile containerize edilip healthcheck ve smoke test içeren, local ortamdan bağımsız çalıştırılabilir ML API haline getirildi.</li>
+                                <li id="fw1Li1">Logistic Regression modeli geliştirildi (ROC-AUC yaklaşık 0.85); eğitim pipeline'ı notebook'tan ayrıştırılarak üretim koduna taşındı ve model sürümleme/metadata yapısı kuruldu.</li>
+                                <li id="fw1Li2">FastAPI üzerinde çalışan inference servisi geliştirildi; strict input validation, şema kontratı, hata senaryoları ve logging (latency + model version) eklendi.</li>
+                                <li id="fw1Li3">Docker ile containerize edilip healthcheck ve smoke test içeren, local ortamdan bağımsız çalıştırılabilir ML API haline getirildi.</li>
                             </ul>
                         </div>
                     </article>
                     <article class="timeline-item">
                         <div class="timeline-date">SupportFlow</div>
                         <div class="timeline-content">
-                            <h3>AI Destekli Multi-Tenant Support Platformu</h3>
+                            <h3 id="fw2Title">AI Destekli Multi-Tenant Support Platformu</h3>
                             <ul>
-                                <li>Destek taleplerinin manuel kategori ve aciliyet belirleme sürecini otomatikleştirmek için FastAPI, MySQL ve Docker kullanarak multi-tenant backend mimarisi kuruldu.</li>
-                                <li>API key doğrulama, rate limiting ve DB seviyesinde idempotency implement edildi.</li>
-                                <li>Ticket mesajları TF-IDF + Logistic Regression modeli ile kategori ve urgency açısından sınıflandırılıp gerçek zamanlı olarak sisteme entegre edildi.</li>
+                                <li id="fw2Li1">Destek taleplerinin manuel kategori ve aciliyet belirleme sürecini otomatikleştirmek için FastAPI, MySQL ve Docker kullanarak multi-tenant backend mimarisi kuruldu.</li>
+                                <li id="fw2Li2">API key doğrulama, rate limiting ve DB seviyesinde idempotency implement edildi.</li>
+                                <li id="fw2Li3">Ticket mesajları TF-IDF + Logistic Regression modeli ile kategori ve urgency açısından sınıflandırılıp gerçek zamanlı olarak sisteme entegre edildi.</li>
                             </ul>
                         </div>
                     </article>
@@ -99,8 +100,8 @@
 
         <section id="projects" class="section">
             <div class="container">
-                <h2 class="section-title">Projeler</h2>
-                <p class="section-description">Diğer Çalışmalar</p>
+                <h2 class="section-title" id="projectsTitle">Projeler</h2>
+                <p class="section-description" id="projectsSubtitle">Diğer Çalışmalar</p>
                 <div class="projects-grid" id="projects-grid">
                     <p class="loading-text">Projeler hazırlanıyor...</p>
                 </div>
@@ -109,23 +110,23 @@
 
         <section id="skills" class="section">
             <div class="container">
-                <h2 class="section-title">Teknik Beceriler</h2>
+                <h2 class="section-title" id="skillsTitle">Teknik Beceriler</h2>
                 <div class="skills-grid">
                     <article class="skill-category">
-                        <h3>Languages</h3>
+                        <h3 id="skillsLanguages">Languages</h3>
                         <div class="skill-tags">
                             <span>Python</span>
                         </div>
                     </article>
                     <article class="skill-category">
-                        <h3>Backend</h3>
+                        <h3 id="skillsBackend">Backend</h3>
                         <div class="skill-tags">
                             <span>FastAPI</span>
                             <span>REST API</span>
                         </div>
                     </article>
                     <article class="skill-category">
-                        <h3>Machine Learning</h3>
+                        <h3 id="skillsML">Machine Learning</h3>
                         <div class="skill-tags">
                             <span>Scikit-learn</span>
                             <span>NumPy</span>
@@ -133,14 +134,14 @@
                         </div>
                     </article>
                     <article class="skill-category">
-                        <h3>Database</h3>
+                        <h3 id="skillsDatabase">Database</h3>
                         <div class="skill-tags">
                             <span>PostgreSQL</span>
                             <span>MySQL</span>
                         </div>
                     </article>
                     <article class="skill-category">
-                        <h3>Tools</h3>
+                        <h3 id="skillsTools">Tools</h3>
                         <div class="skill-tags">
                             <span>Docker</span>
                             <span>Git</span>
@@ -152,15 +153,15 @@
 
         <section id="experience" class="section">
             <div class="container">
-                <h2 class="section-title">Deneyim</h2>
+                <h2 class="section-title" id="experienceTitle">Deneyim</h2>
                 <div class="timeline">
                     <article class="timeline-item">
                         <div class="timeline-date">Eylül 2024 - Haziran 2025</div>
                         <div class="timeline-content">
-                            <h3>Yapay Zeka Topluluğu Başkan Yardımcılığı</h3>
+                            <h3 id="expRole">Yapay Zeka Topluluğu Başkan Yardımcılığı</h3>
                             <ul>
-                                <li>Makine Öğrenmesi ve Derin Öğrenme odaklı atölyelerin düzenlenmesi.</li>
-                                <li>Öğrencilere yönelik teknik öğrenme süreçlerinin desteklenmesi.</li>
+                                <li id="expLi1">Makine Öğrenmesi ve Derin Öğrenme odaklı atölyelerin düzenlenmesi.</li>
+                                <li id="expLi2">Öğrencilere yönelik teknik öğrenme süreçlerinin desteklenmesi.</li>
                             </ul>
                         </div>
                     </article>
@@ -170,7 +171,7 @@
     </main>
 
     <footer>
-        <p>&copy; 2026 Zeynep Şura Kaya</p>
+        <p id="footerText">&copy; 2026 Zeynep Şura Kaya</p>
     </footer>
 
     <script src="script.js"></script>
