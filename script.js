@@ -6,7 +6,7 @@ const translations = {
         navProjects: "Projeler",
         navSkills: "Yetenekler",
         navExperience: "Deneyim",
-        heroTag: "BİLGİSAYAR MÜHENDİSLİĞİ ÖĞRENCİSİ | AI & BACKEND GELİŞTİRİCİ",
+        heroTag: "BİLGİSAYAR MÜHENDİSLİĞİ ÖĞRENCİSİ ",
         heroDescription: "Yapay zeka ve veri odaklı çözümleri üretime uygun backend sistemlerine dönüştürmeye odaklanan bilgisayar mühendisliği son sınıf öğrencisiyim. Ölçeklenebilir API'ler ve veri işleme sistemleri geliştirerek gerçek dünya problemlerine çözüm üretmeyi hedefliyorum.",
         educationTitle: "Eğitim",
         educationSchool: "Kastamonu Üniversitesi",
