@@ -41,7 +41,7 @@ const translations = {
         navProjects: "Projects",
         navSkills: "Skills",
         navExperience: "Experience",
-        heroTag: "COMPUTER ENGINEERING STUDENT | AI & BACKEND DEVELOPER",
+        heroTag: "COMPUTER ENGINEERING ",
         heroDescription: "I am a senior computer engineering student focused on turning AI and data-driven ideas into production-ready backend systems. I aim to solve real-world problems by building scalable APIs and data processing pipelines.",
         educationTitle: "Education",
         educationSchool: "Kastamonu University",
