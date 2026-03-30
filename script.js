@@ -6,24 +6,20 @@ const translations = {
         navProjects: "Projeler",
         navSkills: "Yetenekler",
         navExperience: "Deneyim",
-        heroTag: "BİLGİSAYAR MÜHENDİSLİĞİ",
+        heroTag: "BİLGİSAYAR MÜHENDİSLİĞİ ÖĞRENCİSİ",
         heroDescription: "Yapay zeka ve veri odaklı çözümleri üretime uygun backend sistemlerine dönüştürmeye odaklanan bilgisayar mühendisliği son sınıf öğrencisiyim. Ölçeklenebilir API'ler ve veri işleme sistemleri geliştirerek gerçek dünya problemlerine çözüm üretmeyi hedefliyorum.",
         educationTitle: "Eğitim",
         educationSchool: "Kastamonu Üniversitesi",
         educationDegree: "Bilgisayar Mühendisliği Lisans",
         featuredTitle: "Öne Çıkan Çalışmalar",
         fw1Title: "Uçtan Uca Müşteri Kayıp (Churn) Tahmin Sistemi",
-        fw1Li1: "Logistic Regression modeli geliştirdim (ROC-AUC ~0.85); eğitim pipeline'ını notebook'tan ayırıp üretim koduna taşıdım ve model sürümleme/metadata yapısını kurdum.",
-        fw1Li2: "FastAPI üzerinde inference servisi geliştirdim; strict input validation, şema kontratı, hata senaryoları ve logging ekledim.",
-        fw1Li3: "Docker ile containerize ederek local ortamdan bağımsız ML API haline getirdim.",
+        fw1Li1: "Logistic Regression modeli geliştirildi (ROC-AUC yaklaşık 0.85); eğitim pipeline'ı notebook'tan ayrıştırılarak üretim koduna taşındı ve model sürümleme/metadata yapısı kuruldu.",
+        fw1Li2: "FastAPI üzerinde çalışan inference servisi geliştirildi; strict input validation, şema kontratı, hata senaryoları ve logging (latency + model version) eklendi.",
+        fw1Li3: "Docker ile containerize edilip healthcheck ve smoke test içeren, local ortamdan bağımsız çalıştırılabilir ML API haline getirildi.",
         fw2Title: "AI Destekli Multi-Tenant Support Platformu",
-        fw2Li1: "FastAPI, MySQL ve Docker kullanarak multi-tenant backend mimarisi kurdum.",
-        fw2Li2: "API key doğrulama, rate limiting ve DB seviyesinde idempotency implement ettim.",
-        fw2Li3: "Ticket mesajlarını TF-IDF + Logistic Regression ile sınıflandırıp gerçek zamanlı entegre ettim.",
-        fw3Title: "FinTech Backtesting ve Strateji Analizi Dashboard’u",
-        fw3Li1: "Algoritmik alım-satım stratejilerini test ederek portföy performansını simüle ettim.",
-        fw3Li2: "Sharpe ratio, max drawdown ve win rate ile stratejileri analiz ettim.",
-        fw3Li3: "Streamlit ile interaktif bir dashboard geliştirdim.",
+        fw2Li1: "Destek taleplerinin manuel kategori ve aciliyet belirleme sürecini otomatikleştirmek için FastAPI, MySQL ve Docker kullanarak multi-tenant backend mimarisi kuruldu.",
+        fw2Li2: "API key doğrulama, rate limiting ve DB seviyesinde idempotency implement edildi.",
+        fw2Li3: "Ticket mesajları TF-IDF + Logistic Regression modeli ile kategori ve urgency açısından sınıflandırılıp gerçek zamanlı olarak sisteme entegre edildi.",
         projectsTitle: "Projeler",
         projectsSubtitle: "Diğer Çalışmalar",
         skillsTitle: "Teknik Beceriler",
@@ -52,17 +48,13 @@ const translations = {
         educationDegree: "B.Sc. in Computer Engineering",
         featuredTitle: "Featured Work",
         fw1Title: "End-to-End Customer Churn Prediction System",
-        fw1Li1: "Built a Logistic Regression model (ROC-AUC ~0.85); separated the training pipeline from notebooks into production code and set up model versioning/metadata.",
-        fw1Li2: "Developed a FastAPI inference service with strict input validation, schema contracts, error handling, and logging.",
-        fw1Li3: "Containerized with Docker, including healthchecks and smoke tests to run as an environment-independent ML API.",
+        fw1Li1: "Built a Logistic Regression model (ROC-AUC ~0.85); separated the training pipeline from notebooks into production code with model versioning/metadata.",
+        fw1Li2: "Implemented a FastAPI inference service with strict input validation, schema contracts, error scenarios, and logging (latency + model version).",
+        fw1Li3: "Containerized with Docker and added healthcheck/smoke tests to run as an environment-independent ML API.",
         fw2Title: "AI-Powered Multi-Tenant Support Platform",
-        fw2Li1: "Built a multi-tenant backend architecture with FastAPI, MySQL, and Docker.",
+        fw2Li1: "Built a multi-tenant backend architecture with FastAPI, MySQL, and Docker to automate manual ticket category/urgency classification.",
         fw2Li2: "Implemented API key validation, rate limiting, and DB-level idempotency.",
-        fw2Li3: "Integrated TF-IDF + Logistic Regression to classify ticket messages in real time.",
-        fw3Title: "FinTech Backtesting and Strategy Analysis Dashboard",
-        fw3Li1: "Tested algorithmic trading strategies on financial data and simulated portfolio performance.",
-        fw3Li2: "Analyzed strategy effectiveness using Sharpe ratio, max drawdown, and win rate metrics.",
-        fw3Li3: "Developed an interactive Streamlit dashboard.",
+        fw2Li3: "Integrated TF-IDF + Logistic Regression to classify ticket category and urgency in real time.",
         projectsTitle: "Projects",
         projectsSubtitle: "Other Work",
         skillsTitle: "Technical Skills",
@@ -79,45 +71,110 @@ const translations = {
     }
 };
 
-// Dil değiştirme
-const langToggle = document.getElementById("langToggle");
-let currentLang = "tr";
-
-function setLanguage(lang) {
-    currentLang = lang;
-    for (const [key, value] of Object.entries(translations[lang])) {
-        const el = document.getElementById(key);
-        if (el) el.textContent = value;
-    }
-    renderProjects();
-}
-
-langToggle.addEventListener("click", () => {
-    setLanguage(currentLang === "tr" ? "en" : "tr");
-    langToggle.textContent = currentLang === "tr" ? "TR" : "EN";
-});
-
-window.addEventListener("DOMContentLoaded", () => setLanguage(currentLang));
-
-// Projeler
 const staticProjects = {
     tr: [
-        { name: "car-price-prediction-knn", description: "Python ve K-NN kullanarak araç fiyat tahmini projesi.", url: "https://github.com/surakaya/car-price-prediction-knn" },
-        { name: "e-commerceAnalysis", description: "E-ticaret müşteri davranışları analizi.", url: "https://github.com/surakaya/e-commerceAnalysis" }
+        {
+            name: "car-price-prediction-knn",
+            description: "Python ve K-NN kullanarak araç fiyat tahmini projesi.",
+            topics: ["Python", "KNN", "Jupyter Notebook"],
+            url: "https://github.com/surakaya/car-price-prediction-knn"
+        },
+        {
+            name: "e-commerceAnalysis",
+            description: "E-ticaret müşteri davranışını analiz eden makine öğrenmesi projesi.",
+            topics: ["Machine Learning", "Random Forest", "Decision Tree"],
+            url: "https://github.com/surakaya/e-commerceAnalysis"
+        },
+        {
+            name: "cinevia-movie-app",
+            description: "Java ile geliştirilmiş Android tabanlı film keşif uygulaması.",
+            topics: ["Java", "Android", "Mobile"],
+            url: "https://github.com/surakaya/cinevia-movie-app"
+        }
     ],
     en: [
-        { name: "car-price-prediction-knn", description: "Car price prediction project using Python and K-NN.", url: "https://github.com/surakaya/car-price-prediction-knn" },
-        { name: "e-commerceAnalysis", description: "E-commerce customer behavior analysis.", url: "https://github.com/surakaya/e-commerceAnalysis" }
+        {
+            name: "car-price-prediction-knn",
+            description: "A car price prediction project using Python and K-NN.",
+            topics: ["Python", "KNN", "Jupyter Notebook"],
+            url: "https://github.com/surakaya/car-price-prediction-knn"
+        },
+        {
+            name: "e-commerceAnalysis",
+            description: "A machine learning project for analyzing e-commerce customer behavior.",
+            topics: ["Machine Learning", "Random Forest", "Decision Tree"],
+            url: "https://github.com/surakaya/e-commerceAnalysis"
+        },
+        {
+            name: "cinevia-movie-app",
+            description: "A movie discovery mobile app developed with Java for Android.",
+            topics: ["Java", "Android", "Mobile"],
+            url: "https://github.com/surakaya/cinevia-movie-app"
+        }
     ]
 };
 
-function renderProjects() {
-    const grid = document.getElementById("projects-grid");
-    grid.innerHTML = "";
-    staticProjects[currentLang].forEach(proj => {
-        const div = document.createElement("div");
-        div.className = "project-card";
-        div.innerHTML = `<h3>${proj.name}</h3><p>${proj.description}</p><a href="${proj.url}" target="_blank">${translations[currentLang].projectLink}</a>`;
-        grid.appendChild(div);
+let currentLang = localStorage.getItem("lang") || "tr";
+
+function applyTranslations(lang) {
+    const map = translations[lang] || translations.tr;
+
+    Object.entries(map).forEach(([id, value]) => {
+        if (id === "projectLink") return;
+        const el = document.getElementById(id);
+        if (el) el.textContent = value;
+    });
+
+    document.documentElement.lang = lang;
+
+    const toggle = document.getElementById("langToggle");
+    if (toggle) toggle.textContent = lang === "tr" ? "EN" : "TR";
+}
+
+function renderProjects(lang) {
+    const projectsGrid = document.getElementById("projects-grid");
+    if (!projectsGrid) return;
+
+    const projectList = staticProjects[lang] || staticProjects.tr;
+    const projectLinkText = translations[lang]?.projectLink || translations.tr.projectLink;
+
+    projectsGrid.innerHTML = "";
+
+    projectList.forEach((project) => {
+        const card = document.createElement("article");
+        card.className = "project-card";
+
+        const topicsHtml = project.topics
+            .map((topic) => `<span class="project-topic">${topic}</span>`)
+            .join("");
+
+        card.innerHTML = `
+            <h3><a href="${project.url}" target="_blank" rel="noreferrer">${project.name}</a></h3>
+            <p>${project.description}</p>
+            <div class="project-topics">${topicsHtml}</div>
+            <div class="project-links">
+                <a href="${project.url}" target="_blank" rel="noreferrer">${projectLinkText}</a>
+            </div>
+        `;
+
+        projectsGrid.appendChild(card);
     });
 }
+
+function setLanguage(lang) {
+    currentLang = lang;
+    localStorage.setItem("lang", lang);
+    applyTranslations(lang);
+    renderProjects(lang);
+}
+
+document.addEventListener("DOMContentLoaded", () => {
+    const toggle = document.getElementById("langToggle");
+    if (toggle) {
+        toggle.addEventListener("click", () => {
+            setLanguage(currentLang === "tr" ? "en" : "tr");
+        });
+    }
+
+    setLanguage(currentLang);
+});
