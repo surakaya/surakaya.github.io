@@ -37,12 +37,27 @@
                 </p>
                 <div class="cta-buttons">
                     <a class="cta-btn" href="https://github.com/surakaya" target="_blank" rel="noreferrer">
+                        <span class="icon" aria-hidden="true">
+                            <svg viewBox="0 0 24 24" role="img">
+                                <path d="M12 .5a12 12 0 0 0-3.8 23.4c.6.1.8-.3.8-.6v-2.1c-3.3.7-4-1.4-4-1.4a3.2 3.2 0 0 0-1.3-1.8c-1.1-.8 0-.8 0-.8a2.6 2.6 0 0 1 1.9 1.3 2.6 2.6 0 0 0 3.6 1 2.6 2.6 0 0 1 .8-1.6c-2.7-.3-5.5-1.3-5.5-6a4.7 4.7 0 0 1 1.3-3.3 4.3 4.3 0 0 1 .1-3.2s1-.3 3.4 1.3a11.7 11.7 0 0 1 6.1 0c2.3-1.6 3.4-1.3 3.4-1.3a4.3 4.3 0 0 1 .1 3.2 4.6 4.6 0 0 1 1.3 3.3c0 4.7-2.8 5.7-5.5 6a3 3 0 0 1 .9 2.3v3.4c0 .3.2.7.8.6A12 12 0 0 0 12 .5Z"/>
+                            </svg>
+                        </span>
                         GitHub
                     </a>
                     <a class="cta-btn" href="https://www.linkedin.com/in/%C5%9Fura-kaya-37402a254" target="_blank" rel="noreferrer">
+                        <span class="icon" aria-hidden="true">
+                            <svg viewBox="0 0 24 24" role="img">
+                                <path d="M20.4 20.5h-3.6v-5.6c0-1.3 0-3-1.8-3s-2.1 1.4-2.1 2.9v5.7H9.3V9h3.4v1.6h.1a3.7 3.7 0 0 1 3.4-1.8c3.7 0 4.3 2.4 4.3 5.5v6.2ZM5.3 7.4a2.1 2.1 0 1 1 0-4.2 2.1 2.1 0 0 1 0 4.2Zm1.8 13.1H3.5V9h3.6v11.5Z"/>
+                            </svg>
+                        </span>
                         LinkedIn
                     </a>
                     <a class="cta-btn" href="mailto:zeyneppsurakaya@gmail.com">
+                        <span class="icon" aria-hidden="true">
+                            <svg viewBox="0 0 24 24" role="img">
+                                <path d="M2 5.5A2.5 2.5 0 0 1 4.5 3h15A2.5 2.5 0 0 1 22 5.5v13a2.5 2.5 0 0 1-2.5 2.5h-15A2.5 2.5 0 0 1 2 18.5v-13Zm2.2.3 7.5 5.7a.5.5 0 0 0 .6 0l7.5-5.7a.5.5 0 0 0-.3-.8H4.5a.5.5 0 0 0-.3.8Zm15.8 2.4-6.9 5.3a2.6 2.6 0 0 1-3.2 0L3 8.2v10.3c0 .3.2.5.5.5h16c.3 0 .5-.2.5-.5V8.2Z"/>
+                            </svg>
+                        </span>
                         Mail
                     </a>
                 </div>
@@ -53,7 +68,9 @@
             <div class="container">
                 <h2 class="section-title" id="educationTitle">Eğitim</h2>
                 <div class="education-card">
-                    <h3><span id="educationSchool">Kastamonu Üniversitesi</span> | 2022-2026</h3>
+                    <h3>
+                        <span id="educationSchool">Kastamonu Üniversitesi</span> | <span>2022-2026</span>
+                    </h3>
                     <p id="educationDegree">Bilgisayar Mühendisliği Lisans</p>
                 </div>
             </div>
@@ -68,20 +85,9 @@
                         <div class="timeline-content">
                             <h3 id="fw1Title">Uçtan Uca Müşteri Kayıp (Churn) Tahmin Sistemi</h3>
                             <ul>
-                                <li id="fw1Li1">Logistic Regression modeli geliştirdim (ROC-AUC ~0.85); eğitim pipeline'ını notebook'tan ayırıp üretim koduna taşıdım ve model sürümleme/metadata yapısını kurdum.</li>
-                                <li id="fw1Li2">FastAPI üzerinde inference servisi geliştirdim; strict input validation, şema kontratı, hata senaryoları ve logging ekledim.</li>
-                                <li id="fw1Li3">Docker ile containerize ederek local ortamdan bağımsız ML API haline getirdim.</li>
-                            </ul>
-                        </div>
-                    </article>
-                    <article class="timeline-item">
-                        <div class="timeline-date">Algo Trading Bot</div>
-                        <div class="timeline-content">
-                            <h3 id="fw3Title">FinTech Backtesting ve Strateji Analizi Dashboard’u</h3>
-                            <ul>
-                                <li id="fw3Li1">Algoritmik alım-satım stratejilerini test ederek portföy performansını simüle ettim.</li>
-                                <li id="fw3Li2">Sharpe ratio, max drawdown ve win rate ile stratejileri analiz ettim.</li>
-                                <li id="fw3Li3">Streamlit ile interaktif bir dashboard geliştirdim.</li>
+                                <li id="fw1Li1">Logistic Regression modeli geliştirildi (ROC-AUC yaklaşık 0.85); eğitim pipeline'ı notebook'tan ayrıştırılarak üretim koduna taşındı ve model sürümleme/metadata yapısı kuruldu.</li>
+                                <li id="fw1Li2">FastAPI üzerinde çalışan inference servisi geliştirildi; strict input validation, şema kontratı, hata senaryoları ve logging (latency + model version) eklendi.</li>
+                                <li id="fw1Li3">Docker ile containerize edilip healthcheck ve smoke test içeren, local ortamdan bağımsız çalıştırılabilir ML API haline getirildi.</li>
                             </ul>
                         </div>
                     </article>
@@ -90,9 +96,9 @@
                         <div class="timeline-content">
                             <h3 id="fw2Title">AI Destekli Multi-Tenant Support Platformu</h3>
                             <ul>
-                                <li id="fw2Li1">FastAPI, MySQL ve Docker kullanarak multi-tenant backend mimarisi kurdum.</li>
-                                <li id="fw2Li2">API key doğrulama, rate limiting ve DB seviyesinde idempotency implement ettim.</li>
-                                <li id="fw2Li3">Ticket mesajlarını TF-IDF + Logistic Regression ile sınıflandırıp gerçek zamanlı entegre ettim.</li>
+                                <li id="fw2Li1">Destek taleplerinin manuel kategori ve aciliyet belirleme sürecini otomatikleştirmek için FastAPI, MySQL ve Docker kullanarak multi-tenant backend mimarisi kuruldu.</li>
+                                <li id="fw2Li2">API key doğrulama, rate limiting ve DB seviyesinde idempotency implement edildi.</li>
+                                <li id="fw2Li3">Ticket mesajları TF-IDF + Logistic Regression modeli ile kategori ve urgency açısından sınıflandırılıp gerçek zamanlı olarak sisteme entegre edildi.</li>
                             </ul>
                         </div>
                     </article>
@@ -116,23 +122,38 @@
                 <div class="skills-grid">
                     <article class="skill-category">
                         <h3 id="skillsLanguages">Languages</h3>
-                        <div class="skill-tags"><span>Python</span></div>
+                        <div class="skill-tags">
+                            <span>Python</span>
+                        </div>
                     </article>
                     <article class="skill-category">
                         <h3 id="skillsBackend">Backend</h3>
-                        <div class="skill-tags"><span>FastAPI</span><span>REST API</span></div>
+                        <div class="skill-tags">
+                            <span>FastAPI</span>
+                            <span>REST API</span>
+                        </div>
                     </article>
                     <article class="skill-category">
                         <h3 id="skillsML">Machine Learning</h3>
-                        <div class="skill-tags"><span>Scikit-learn</span><span>NumPy</span><span>Pandas</span></div>
+                        <div class="skill-tags">
+                            <span>Scikit-learn</span>
+                            <span>NumPy</span>
+                            <span>Pandas</span>
+                        </div>
                     </article>
                     <article class="skill-category">
                         <h3 id="skillsDatabase">Database</h3>
-                        <div class="skill-tags"><span>PostgreSQL</span><span>MySQL</span></div>
+                        <div class="skill-tags">
+                            <span>PostgreSQL</span>
+                            <span>MySQL</span>
+                        </div>
                     </article>
                     <article class="skill-category">
                         <h3 id="skillsTools">Tools</h3>
-                        <div class="skill-tags"><span>Docker</span><span>Git</span></div>
+                        <div class="skill-tags">
+                            <span>Docker</span>
+                            <span>Git</span>
+                        </div>
                     </article>
                 </div>
             </div>
