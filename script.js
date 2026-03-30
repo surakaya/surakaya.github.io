@@ -6,24 +6,24 @@ const translations = {
         navProjects: "Projeler",
         navSkills: "Yetenekler",
         navExperience: "Deneyim",
-        heroTag: "BİLGİSAYAR MÜHENDİSLİĞİ ÖĞRENCİSİ ",
+        heroTag: "BİLGİSAYAR MÜHENDİSLİĞİ",
         heroDescription: "Yapay zeka ve veri odaklı çözümleri üretime uygun backend sistemlerine dönüştürmeye odaklanan bilgisayar mühendisliği son sınıf öğrencisiyim. Ölçeklenebilir API'ler ve veri işleme sistemleri geliştirerek gerçek dünya problemlerine çözüm üretmeyi hedefliyorum.",
         educationTitle: "Eğitim",
         educationSchool: "Kastamonu Üniversitesi",
         educationDegree: "Bilgisayar Mühendisliği Lisans",
         featuredTitle: "Öne Çıkan Çalışmalar",
         fw1Title: "Uçtan Uca Müşteri Kayıp (Churn) Tahmin Sistemi",
-        fw1Li1: "Logistic Regression modeli geliştirildi (ROC-AUC yaklaşık 0.85); eğitim pipeline'ı notebook'tan ayrıştırılarak üretim koduna taşındı ve model sürümleme/metadata yapısı kuruldu.",
-        fw1Li2: "FastAPI üzerinde çalışan inference servisi geliştirildi; strict input validation, şema kontratı, hata senaryoları ve logging (latency + model version) eklendi.",
-        fw1Li3: "Docker ile containerize edilip healthcheck ve smoke test içeren, local ortamdan bağımsız çalıştırılabilir ML API haline getirildi.",
-        fwAlgoTitle: "Fintech Backtesting ve Strateji Analizi Dashboard'u",
-        fwAlgoLi1: "Otomatik Ticaret ve Backtesting: Finansal veriler üzerinde algoritmik alım-satım stratejilerini test ederek portföy performansını simüle ettim.",
-        fwAlgoLi2: "Strateji Analizi ve Performans Ölçümü: Sharpe ratio, max drawdown, win rate gibi metriklerle stratejilerin etkinliğini değerlendirdim ve karşılaştırmalı analiz yaptım.",
-        fwAlgoLi3: "Dashboard ve Görselleştirme: Streamlit kullanarak interaktif bir arayüz geliştirdim; kullanıcılar stratejileri seçip performans grafiklerini anlık görebiliyor.",
+        fw1Li1: "Logistic Regression modeli geliştirdim (ROC-AUC yaklaşık 0.85); eğitim pipeline'ını notebook'tan ayırıp üretim koduna taşıdım ve model sürümleme/metadata yapısını kurdum.",
+        fw1Li2: "FastAPI üzerinde inference servisi geliştirdim; strict input validation, şema kontratı, hata senaryoları ve logging (latency + model version) ekledim.",
+        fw1Li3: "Docker ile containerize ederek healthcheck ve smoke test içeren, local ortamdan bağımsız çalıştırılabilir ML API haline getirdim.",
         fw2Title: "AI Destekli Multi-Tenant Support Platformu",
-        fw2Li1: "Destek taleplerinin manuel kategori ve aciliyet belirleme sürecini otomatikleştirmek için FastAPI, MySQL ve Docker kullanarak multi-tenant backend mimarisi kuruldu.",
-        fw2Li2: "API key doğrulama, rate limiting ve DB seviyesinde idempotency implement edildi.",
-        fw2Li3: "Ticket mesajları TF-IDF + Logistic Regression modeli ile kategori ve urgency açısından sınıflandırılıp gerçek zamanlı olarak sisteme entegre edildi.",
+        fw2Li1: "Destek taleplerinin manuel kategori ve aciliyet belirleme sürecini otomatikleştirmek için FastAPI, MySQL ve Docker kullanarak multi-tenant backend mimarisi kurdum.",
+        fw2Li2: "API key doğrulama, rate limiting ve DB seviyesinde idempotency implement ettim.",
+        fw2Li3: "Ticket mesajlarını TF-IDF + Logistic Regression modeli ile kategori ve urgency açısından sınıflandırıp gerçek zamanlı olarak sisteme entegre ettim.",
+        fw3Title: "FinTech Backtesting ve Strateji Analizi Dashboard’u",
+        fw3Li1: "Finansal veriler üzerinde algoritmik alım-satım stratejilerini test ederek portföy performansını simüle ettim.",
+        fw3Li2: "Sharpe ratio, max drawdown ve win rate gibi metriklerle stratejilerin etkinliğini analiz ettim ve karşılaştırmalı raporlar hazırladım.",
+        fw3Li3: "Streamlit ile interaktif bir dashboard geliştirdim; kullanıcılar stratejileri seçip performans grafiklerini anlık görebiliyor.",
         projectsTitle: "Projeler",
         projectsSubtitle: "Diğer Çalışmalar",
         skillsTitle: "Teknik Beceriler",
@@ -34,8 +34,8 @@ const translations = {
         skillsTools: "Tools",
         experienceTitle: "Deneyim",
         expRole: "Yapay Zeka Topluluğu Başkan Yardımcılığı",
-        expLi1: "Makine Öğrenmesi ve Derin Öğrenme odaklı atölyelerin düzenlenmesi.",
-        expLi2: "Öğrencilere yönelik teknik öğrenme süreçlerinin desteklenmesi.",
+        expLi1: "Makine Öğrenmesi ve Derin Öğrenme odaklı atölyelerin düzenlenmesini sağladım.",
+        expLi2: "Öğrencilere yönelik teknik öğrenme süreçlerini destekledim.",
         projectLink: "GitHub'da Aç"
     },
     en: {
@@ -45,24 +45,24 @@ const translations = {
         navProjects: "Projects",
         navSkills: "Skills",
         navExperience: "Experience",
-        heroTag: "COMPUTER ENGINEERING ",
+        heroTag: "COMPUTER ENGINEERING",
         heroDescription: "I am a senior computer engineering student focused on turning AI and data-driven ideas into production-ready backend systems. I aim to solve real-world problems by building scalable APIs and data processing pipelines.",
         educationTitle: "Education",
         educationSchool: "Kastamonu University",
         educationDegree: "B.Sc. in Computer Engineering",
         featuredTitle: "Featured Work",
         fw1Title: "End-to-End Customer Churn Prediction System",
-        fw1Li1: "Built a Logistic Regression model (ROC-AUC ~0.85); separated the training pipeline from notebooks into production code with model versioning/metadata.",
-        fw1Li2: "Implemented a FastAPI inference service with strict input validation, schema contracts, error scenarios, and logging (latency + model version).",
-        fw1Li3: "Containerized with Docker and added healthcheck/smoke tests to run as an environment-independent ML API.",
-        fwAlgoTitle: "Fintech Backtesting and Strategy Analysis Dashboard",
-        fwAlgoLi1: "Automated Trading and Backtesting: Tested algorithmic trading strategies on financial data to simulate portfolio performance.",
-        fwAlgoLi2: "Strategy Analysis and Performance Metrics: Evaluated strategies using metrics like Sharpe ratio, max drawdown, and win rate with comparative analysis.",
-        fwAlgoLi3: "Dashboard and Visualization: Developed an interactive Streamlit interface where users can select strategies and view performance charts in real-time.",
+        fw1Li1: "Built a Logistic Regression model (ROC-AUC ~0.85); separated the training pipeline from notebooks into production code and set up model versioning/metadata.",
+        fw1Li2: "Developed a FastAPI inference service with strict input validation, schema contracts, error handling, and logging (latency + model version).",
+        fw1Li3: "Containerized with Docker, including healthchecks and smoke tests to run as an environment-independent ML API.",
         fw2Title: "AI-Powered Multi-Tenant Support Platform",
-        fw2Li1: "Built a multi-tenant backend architecture with FastAPI, MySQL, and Docker to automate manual ticket category/urgency classification.",
+        fw2Li1: "Built a multi-tenant backend architecture with FastAPI, MySQL, and Docker to automate ticket category and urgency classification.",
         fw2Li2: "Implemented API key validation, rate limiting, and DB-level idempotency.",
         fw2Li3: "Integrated TF-IDF + Logistic Regression to classify ticket category and urgency in real time.",
+        fw3Title: "FinTech Backtesting and Strategy Analysis Dashboard",
+        fw3Li1: "Tested algorithmic trading strategies on financial data and simulated portfolio performance.",
+        fw3Li2: "Analyzed strategy effectiveness using Sharpe ratio, max drawdown, and win rate metrics and prepared comparative reports.",
+        fw3Li3: "Developed an interactive Streamlit dashboard; users can select strategies and view performance charts in real time.",
         projectsTitle: "Projects",
         projectsSubtitle: "Other Work",
         skillsTitle: "Technical Skills",
@@ -78,6 +78,26 @@ const translations = {
         projectLink: "View on GitHub"
     }
 };
+
+// Dil değiştirme fonksiyonu
+const langToggle = document.getElementById("langToggle");
+let currentLang = "tr";
+
+function setLanguage(lang) {
+    currentLang = lang;
+    for (const [key, value] of Object.entries(translations[lang])) {
+        const el = document.getElementById(key);
+        if (el) el.textContent = value;
+    }
+}
+
+langToggle.addEventListener("click", () => {
+    setLanguage(currentLang === "tr" ? "en" : "tr");
+    langToggle.textContent = currentLang === "tr" ? "TR" : "EN";
+});
+
+// Sayfa yüklenince varsayılan dil
+window.addEventListener("DOMContentLoaded", () => setLanguage(currentLang));
 
 const staticProjects = {
     tr: [
