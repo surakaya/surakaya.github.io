@@ -1,188 +1,307 @@
 const translations = {
+
     tr: {
+
         navAbout: "Hakkımda",
         navEducation: "Eğitim",
         navFeatured: "Çalışmalar",
-        navProjects: "Projeler",
         navSkills: "Yetenekler",
         navExperience: "Deneyim",
-        heroTag: "BİLGİSAYAR MÜHENDİSLİĞİ ÖĞRENCİSİ",
-        heroDescription: "Yapay zeka ve veri odaklı çözümleri üretime uygun backend sistemlerine dönüştürmeye odaklanan bilgisayar mühendisliği son sınıf öğrencisiyim. Ölçeklenebilir API'ler ve veri işleme sistemleri geliştirerek gerçek dünya problemlerine çözüm üretmeyi hedefliyorum.",
+
+        heroTag: "BİLGİSAYAR MÜHENDİSLİĞİ",
+
+        heroDescription:
+            "Yapay zeka ve veri odaklı çözümleri üretime uygun backend sistemlerine dönüştürmeye odaklanan bilgisayar mühendisliği son sınıf öğrencisiyim. Ölçeklenebilir API'ler ve veri işleme sistemleri geliştirerek gerçek dünya problemlerine çözüm üretmeyi hedefliyorum.",
+
+
         educationTitle: "Eğitim",
+
         educationSchool: "Kastamonu Üniversitesi",
-        educationDegree: "Bilgisayar Mühendisliği Lisans",
+
+        educationDegree:
+            "Bilgisayar Mühendisliği Lisans",
+
+
         featuredTitle: "Öne Çıkan Çalışmalar",
-        fw1Title: "Uçtan Uca Müşteri Kayıp (Churn) Tahmin Sistemi",
-        fw1Li1: "Logistic Regression modeli geliştirildi (ROC-AUC yaklaşık 0.85); eğitim pipeline'ı notebook'tan ayrıştırılarak üretim koduna taşındı ve model sürümleme/metadata yapısı kuruldu.",
-        fw1Li2: "FastAPI üzerinde çalışan inference servisi geliştirildi; strict input validation, şema kontratı, hata senaryoları ve logging (latency + model version) eklendi.",
-        fw1Li3: "Docker ile containerize edilip healthcheck ve smoke test içeren, local ortamdan bağımsız çalıştırılabilir ML API haline getirildi.",
-        w3Title: "FINTECH BACKTESTING VE STRATEJİ ANALİZİ DASHBOARD'U",
-        fw3Li1: "Otomatik Ticaret ve Backtesting: Finansal veriler üzerinde algoritmik alım-satım stratejilerini test ederek portföy performansı simüle edildi.",
-        fw3Li2: "Strateji Analizi ve Performans Ölçümü: Sharpe ratio, max drawdown, win rate gibi metriklerle stratejilerin etkinliğini değerlendirildi ve karşılaştırmalı analiz yapıldı.",
-        fw3Li3: "Dashboard ve Görselleştirme: Streamlit kullanarak interaktif bir arayüz geliştirildi; kullanıcılar stratejileri seçip performans grafiklerini anlık görebiliyor.",
-        fw2Title: "AI Destekli Multi-Tenant Support Platformu",
-        fw2Li1: "Destek taleplerinin manuel kategori ve aciliyet belirleme sürecini otomatikleştirmek için FastAPI, MySQL ve Docker kullanarak multi-tenant backend mimarisi kuruldu.",
-        fw2Li2: "API key doğrulama, rate limiting ve DB seviyesinde idempotency implement edildi.",
-        fw2Li3: "Ticket mesajları TF-IDF + Logistic Regression modeli ile kategori ve urgency açısından sınıflandırılıp gerçek zamanlı olarak sisteme entegre edildi.",
-        projectsTitle: "Projeler",
-        projectsSubtitle: "Diğer Çalışmalar",
+
+
+        /* CHURNGUARD */
+
+        fw1Repo: "GitHub'da Aç",
+
+        fw1Title:
+            "Uçtan Uca Müşteri Kayıp (Churn) Tahmin Sistemi",
+
+        fw1Li1:
+            "Logistic Regression modeli geliştirildi (ROC-AUC yaklaşık 0.85); eğitim pipeline'ı notebook'tan ayrıştırılarak üretim koduna taşındı ve model sürümleme/metadata yapısı kuruldu.",
+
+        fw1Li2:
+            "FastAPI üzerinde çalışan inference servisi geliştirildi; strict input validation, şema kontratı, hata senaryoları ve logging (latency + model version) eklendi.",
+
+        fw1Li3:
+            "Docker ile containerize edilip healthcheck ve smoke test içeren, local ortamdan bağımsız çalıştırılabilir ML API haline getirildi.",
+
+
+        /* TASK TRACKER */
+
+        fw2Repo: "GitHub'da Aç",
+
+        fw2Title:
+            "Full-Stack Task Management System",
+
+        fw2Li1:
+            "Next.js App Router tabanlı backend ve React + Vite frontend kullanılarak full-stack görev yönetim uygulaması geliştirildi.",
+
+        fw2Li2:
+            "Kullanıcı kayıt, login, logout ve Bearer Token tabanlı authentication yapısı oluşturuldu; görevler için CRUD işlemleri ve validation uygulandı.",
+
+        fw2Li3:
+            "Prisma ORM ve MySQL kullanılarak ilişkisel veritabanı mimarisi oluşturuldu; migration yapısı ve User, Session, Task, Room ve RoomMember ilişkileri kuruldu.",
+
+
+        /* SUPPORTFLOW */
+
+        fw3Repo: "GitHub'da Aç",
+
+        fw3Title:
+            "AI Destekli Multi-Tenant Support Platformu",
+
+        fw3Li1:
+            "Destek taleplerinin manuel kategori ve aciliyet belirleme sürecini otomatikleştirmek için FastAPI, MySQL ve Docker kullanarak multi-tenant backend mimarisi kuruldu.",
+
+        fw3Li2:
+            "API key doğrulama, rate limiting ve DB seviyesinde idempotency implement edildi.",
+
+        fw3Li3:
+            "Ticket mesajları TF-IDF + Logistic Regression modeli ile kategori ve urgency açısından sınıflandırılıp gerçek zamanlı olarak sisteme entegre edildi.",
+
+
+        /* SKILLS */
+
         skillsTitle: "Teknik Beceriler",
+
         skillsLanguages: "Languages",
-        skillsBackend: "Backend",
+
+        skillsBackend: "Backend & API",
+
         skillsML: "Machine Learning",
+
         skillsDatabase: "Database",
-        skillsTools: "Tools",
+
+        skillsTools: "Tools & Frontend",
+
+
+        /* EXPERIENCE */
+
         experienceTitle: "Deneyim",
-        expRole: "Yapay Zeka Topluluğu Başkan Yardımcılığı",
-        expLi1: "Makine Öğrenmesi ve Derin Öğrenme odaklı atölyelerin düzenlenmesi.",
-        expLi2: "Öğrencilere yönelik teknik öğrenme süreçlerinin desteklenmesi.",
-        projectLink: "GitHub'da Aç"
+
+        expRole:
+            "Yapay Zeka Topluluğu Başkan Yardımcılığı",
+
+        expLi1:
+            "Makine Öğrenmesi ve Derin Öğrenme odaklı atölyelerin düzenlenmesi.",
+
+        expLi2:
+            "Öğrencilere yönelik teknik öğrenme süreçlerinin desteklenmesi."
+
     },
+
+
     en: {
+
         navAbout: "About",
         navEducation: "Education",
         navFeatured: "Featured",
-        navProjects: "Projects",
         navSkills: "Skills",
         navExperience: "Experience",
+
+
         heroTag: "COMPUTER ENGINEERING",
-        heroDescription: "I am a senior computer engineering student focused on turning AI and data-driven ideas into production-ready backend systems. I aim to solve real-world problems by building scalable APIs and data processing pipelines.",
+
+        heroDescription:
+            "I am a senior computer engineering student focused on turning AI and data-driven ideas into production-ready backend systems. I aim to solve real-world problems by building scalable APIs and data processing pipelines.",
+
+
         educationTitle: "Education",
-        educationSchool: "Kastamonu University",
-        educationDegree: "B.Sc. in Computer Engineering",
+
+        educationSchool:
+            "Kastamonu University",
+
+        educationDegree:
+            "B.Sc. in Computer Engineering",
+
+
         featuredTitle: "Featured Work",
-        fw1Title: "End-to-End Customer Churn Prediction System",
-        fw1Li1: "Built a Logistic Regression model (ROC-AUC ~0.85); separated the training pipeline from notebooks into production code with model versioning/metadata.",
-        fw1Li2: "Implemented a FastAPI inference service with strict input validation, schema contracts, error scenarios, and logging (latency + model version).",
-        fw1Li3: "Containerized with Docker and added healthcheck/smoke tests to run as an environment-independent ML API.",
-        fw3Title: "FINTECH BACKTESTING AND STRATEGY ANALYSIS DASHBOARD",
-        fw3Li1: "Automated Trading and Backtesting: Simulated portfolio performance by testing algorithmic trading strategies on financial data.",
-        fw3Li2: "Strategy Analysis and Performance Metrics: Evaluated strategy effectiveness using metrics such as Sharpe ratio, max drawdown, and win rate with comparative analysis.",
-        fw3Li3: "Dashboard and Visualization: Developed an interactive interface using Streamlit; users can select strategies and view real-time performance charts.",
-        fw2Title: "AI-Powered Multi-Tenant Support Platform",
-        fw2Li1: "Built a multi-tenant backend architecture with FastAPI, MySQL, and Docker to automate manual ticket category/urgency classification.",
-        fw2Li2: "Implemented API key validation, rate limiting, and DB-level idempotency.",
-        fw2Li3: "Integrated TF-IDF + Logistic Regression to classify ticket category and urgency in real time.",
-        projectsTitle: "Projects",
-        projectsSubtitle: "Other Work",
+
+
+        /* CHURNGUARD */
+
+        fw1Repo: "View on GitHub",
+
+        fw1Title:
+            "End-to-End Customer Churn Prediction System",
+
+        fw1Li1:
+            "Built a Logistic Regression model (ROC-AUC ~0.85); separated the training pipeline from notebooks into production code with model versioning and metadata.",
+
+        fw1Li2:
+            "Implemented a FastAPI inference service with strict input validation, schema contracts, error handling, and logging for latency and model version.",
+
+        fw1Li3:
+            "Containerized the service with Docker and added healthchecks and smoke tests for environment-independent execution.",
+
+
+        /* TASK TRACKER */
+
+        fw2Repo: "View on GitHub",
+
+        fw2Title:
+            "Full-Stack Task Management System",
+
+        fw2Li1:
+            "Built a full-stack task management application using a Next.js App Router backend and React + Vite frontend.",
+
+        fw2Li2:
+            "Implemented user registration, login, logout, Bearer Token authentication, CRUD operations, and task validation.",
+
+        fw2Li3:
+            "Designed a relational database architecture using Prisma ORM and MySQL, including migrations and User, Session, Task, Room, and RoomMember relationships.",
+
+
+        /* SUPPORTFLOW */
+
+        fw3Repo: "View on GitHub",
+
+        fw3Title:
+            "AI-Powered Multi-Tenant Support Platform",
+
+        fw3Li1:
+            "Built a multi-tenant backend architecture with FastAPI, MySQL, and Docker to automate ticket category and urgency classification.",
+
+        fw3Li2:
+            "Implemented API key validation, rate limiting, and database-level idempotency.",
+
+        fw3Li3:
+            "Integrated TF-IDF + Logistic Regression to classify ticket category and urgency in real time.",
+
+
+        /* SKILLS */
+
         skillsTitle: "Technical Skills",
+
         skillsLanguages: "Languages",
-        skillsBackend: "Backend",
+
+        skillsBackend: "Backend & API",
+
         skillsML: "Machine Learning",
+
         skillsDatabase: "Database",
-        skillsTools: "Tools",
+
+        skillsTools: "Tools & Frontend",
+
+
+        /* EXPERIENCE */
+
         experienceTitle: "Experience",
-        expRole: "Vice President, AI Community",
-        expLi1: "Organized workshops focused on Machine Learning and Deep Learning.",
-        expLi2: "Supported students in technical learning processes.",
-        projectLink: "View on GitHub"
+
+        expRole:
+            "Vice President, AI Community",
+
+        expLi1:
+            "Organized workshops focused on Machine Learning and Deep Learning.",
+
+        expLi2:
+            "Supported students in technical learning processes."
+
     }
+
 };
 
-const staticProjects = {
-    tr: [
-        {
-            name: "car-price-prediction-knn",
-            description: "Python ve K-NN kullanarak araç fiyat tahmini projesi.",
-            topics: ["Python", "KNN", "Jupyter Notebook"],
-            url: "https://github.com/surakaya/car-price-prediction-knn"
-        },
-        {
-            name: "e-commerceAnalysis",
-            description: "E-ticaret müşteri davranışını analiz eden makine öğrenmesi projesi.",
-            topics: ["Machine Learning", "Random Forest", "Decision Tree"],
-            url: "https://github.com/surakaya/e-commerceAnalysis"
-        },
-        {
-            name: "cinevia-movie-app",
-            description: "Java ile geliştirilmiş Android tabanlı film keşif uygulaması.",
-            topics: ["Java", "Android", "Mobile"],
-            url: "https://github.com/surakaya/cinevia-movie-app"
-        }
-    ],
-    en: [
-        {
-            name: "car-price-prediction-knn",
-            description: "A car price prediction project using Python and K-NN.",
-            topics: ["Python", "KNN", "Jupyter Notebook"],
-            url: "https://github.com/surakaya/car-price-prediction-knn"
-        },
-        {
-            name: "e-commerceAnalysis",
-            description: "A machine learning project for analyzing e-commerce customer behavior.",
-            topics: ["Machine Learning", "Random Forest", "Decision Tree"],
-            url: "https://github.com/surakaya/e-commerceAnalysis"
-        },
-        {
-            name: "cinevia-movie-app",
-            description: "A movie discovery mobile app developed with Java for Android.",
-            topics: ["Java", "Android", "Mobile"],
-            url: "https://github.com/surakaya/cinevia-movie-app"
-        }
-    ]
-};
 
-let currentLang = localStorage.getItem("lang") || "tr";
+let currentLang =
+    localStorage.getItem("lang") || "tr";
+
 
 function applyTranslations(lang) {
-    const map = translations[lang] || translations.tr;
 
-    Object.entries(map).forEach(([id, value]) => {
-        if (id === "projectLink") return;
-        const el = document.getElementById(id);
-        if (el) el.textContent = value;
-    });
+    const map =
+        translations[lang] || translations.tr;
+
+
+    Object.entries(map).forEach(
+        ([id, value]) => {
+
+            const el =
+                document.getElementById(id);
+
+            if (el) {
+                el.textContent = value;
+            }
+
+        }
+    );
+
 
     document.documentElement.lang = lang;
 
-    const toggle = document.getElementById("langToggle");
-    if (toggle) toggle.textContent = lang === "tr" ? "EN" : "TR";
-}
 
-function renderProjects(lang) {
-    const projectsGrid = document.getElementById("projects-grid");
-    if (!projectsGrid) return;
+    const toggle =
+        document.getElementById("langToggle");
 
-    const projectList = staticProjects[lang] || staticProjects.tr;
-    const projectLinkText = translations[lang]?.projectLink || translations.tr.projectLink;
 
-    projectsGrid.innerHTML = "";
-
-    projectList.forEach((project) => {
-        const card = document.createElement("article");
-        card.className = "project-card";
-
-        const topicsHtml = project.topics
-            .map((topic) => `<span class="project-topic">${topic}</span>`)
-            .join("");
-
-        card.innerHTML = `
-            <h3><a href="${project.url}" target="_blank" rel="noreferrer">${project.name}</a></h3>
-            <p>${project.description}</p>
-            <div class="project-topics">${topicsHtml}</div>
-            <div class="project-links">
-                <a href="${project.url}" target="_blank" rel="noreferrer">${projectLinkText}</a>
-            </div>
-        `;
-
-        projectsGrid.appendChild(card);
-    });
-}
-
-function setLanguage(lang) {
-    currentLang = lang;
-    localStorage.setItem("lang", lang);
-    applyTranslations(lang);
-    renderProjects(lang);
-}
-
-document.addEventListener("DOMContentLoaded", () => {
-    const toggle = document.getElementById("langToggle");
     if (toggle) {
-        toggle.addEventListener("click", () => {
-            setLanguage(currentLang === "tr" ? "en" : "tr");
-        });
+
+        toggle.textContent =
+            lang === "tr" ? "EN" : "TR";
+
     }
 
-    setLanguage(currentLang);
-});
+}
+
+
+function setLanguage(lang) {
+
+    currentLang = lang;
+
+    localStorage.setItem(
+        "lang",
+        lang
+    );
+
+    applyTranslations(lang);
+
+}
+
+
+document.addEventListener(
+    "DOMContentLoaded",
+    () => {
+
+        const toggle =
+            document.getElementById(
+                "langToggle"
+            );
+
+
+        if (toggle) {
+
+            toggle.addEventListener(
+                "click",
+                () => {
+
+                    setLanguage(
+                        currentLang === "tr"
+                            ? "en"
+                            : "tr"
+                    );
+
+                }
+            );
+
+        }
+
+
+        setLanguage(currentLang);
+
+    }
+);
